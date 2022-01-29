@@ -2,11 +2,13 @@
     "root": true,
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "vue/setup-compiler-macros": true
     },
     "extends": [
         "eslint:recommended",
         "plugin:vue/essential",
+        "plugin:vue/vue3-recommended",
         "airbnb-base",
         "prettier"
     ],
@@ -17,11 +19,19 @@
     },
     "plugins": ["vue", "@typescript-eslint"],
     "rules": {
-        "import/no-extraneous-dependencies": [
-            "error",
-            {
-                "devDependencies": true
+        "vue/script-setup-uses-vars": "error"
+    },
+    "settings": {
+        "import/core-modules": ["vite", "@vitejs/plugin-vue", "@vue/test-utils"]
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.spec.ts"
+            ],
+            "env": {
+                "jest": true
             }
-        ]
-    }
+        }
+    ]
 }
