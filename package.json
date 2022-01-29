@@ -2,7 +2,7 @@
     "name": "vue-test",
     "version": "1.0.0",
     "scripts": {
-        "dev": "--noEmit && vite",
+        "dev": "vite",
         "build": "vue-tsc --noEmit && vite build",
         "preview": "vite preview",
         "prepare": "husky install",
