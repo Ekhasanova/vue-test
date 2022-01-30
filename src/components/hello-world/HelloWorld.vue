@@ -1,12 +1,3 @@
-<script lang="ts">
-import { Vue } from "vue-class-component";
-import { Prop } from "vue-property-decorator";
-
-export default class HelloWorld extends Vue {
-    @Prop() msg!: string;
-}
-</script>
-
 <template>
     <h1>{{ msg }}</h1>
 
@@ -34,5 +25,15 @@ export default class HelloWorld extends Vue {
         <code>components/HelloWorld.vue</code> to test hot module replacement.
     </p>
 </template>
+
+<script lang="ts">
+// defineProps<{ msg: string }>();
+export default {
+    name: "HelloWorld",
+    props: {
+        msg: String,
+    },
+};
+</script>
 
 <style scoped lang="scss" src="./HelloWorld.scss"></style>

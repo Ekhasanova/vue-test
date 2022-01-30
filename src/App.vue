@@ -1,23 +1,11 @@
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/hello-world/HelloWorld.vue";
-import Counter from "./components/counter/Counter.vue";
-
-@Options({
-    name: "App",
-    components: {
-        HelloWorld,
-        Counter,
-    },
-})
-export default class App extends Vue {}
-</script>
-
 <template>
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-    <Counter />
 </template>
+
+<script setup lang="ts">
+import HelloWorld from "./components/hello-world/HelloWorld.vue";
+</script>
 
 <style>
 #app {
