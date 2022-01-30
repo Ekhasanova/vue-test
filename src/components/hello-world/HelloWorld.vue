@@ -1,13 +1,9 @@
 <script lang="ts">
-import { Vue, Options } from "vue-class-component";
+import { Vue } from "vue-class-component";
+import { Prop } from "vue-property-decorator";
 
-@Options({
-    props: {
-        msg: String,
-    },
-})
-export default class Counter extends Vue {
-    msg!: string;
+export default class HelloWorld extends Vue {
+    @Prop() msg!: string;
 }
 </script>
 
